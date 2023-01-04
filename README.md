@@ -1,3 +1,31 @@
+Space Background Photo: Photo by Ivan Jevtic on Unsplash: https://unsplash.com/photos/AL3Cbxp8css
+
+HTML Icon: Icon by Raj Dev on freeicons.io: https://freeicons.io/flat-logos/html-icon-18437
+
+CSS Icon: Icon by Raj Dev on freeicons.io https://freeicons.io/flat-logos/css-icon-18459
+
+JavaScipt Icon: Icon by Fasil on freeicons.io: https://freeicons.io/super-tiny-icons/javascript-icon-28534
+
+TypeScript Icon: Icon by icon king1 on freeicons.io: https://freeicons.io/vector-and-svg-logos-icons-19/typescript-icon-icon-9172
+
+React Icon: Icon by icon king1 on freeicons.io: https://freeicons.io/logos/js-logo-react-icon-12891
+
+SASS Icon: Icon by icon king1 on freeicons.io: https://freeicons.io/vector-and-svg-logos-icons-17/sass-icon-9036
+
+Bootstrap Icon: Icon by icon king1 on freeicons.io: https://freeicons.io/vector-and-svg-logos-icons-04/bootstrap-icon-2523
+
+git icon: Icon by icon king1 on freeicons.io: https://freeicons.io/vector-and-svg-logos-icons-09/git-icon-icon-icon
+
+GitHub icon: Icon by icon king1 on freeicons.io: https://freeicons.io/common-style-icons-8/github-icon-11674
+
+npm icon: Icon by icon king1 on freeicons.io: https://freeicons.io/vector-and-svg-logos-icons-16/npm-icon-8976
+
+webpack icon: Icon by Fasil on freeicons.io: https://freeicons.io/programming-language-logo/webpack-icon-33304
+
+figma icon: Icon by icon king1 on freeicons.io https://freeicons.io/social-media-icons-4/figma-icon-15629
+
+adobe xd: Icon by Mads Hougesen on freeicons.io https://freeicons.io/skill-icon-pack/adobe-xd-color-xd-adobe-icon-41226
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

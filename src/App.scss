@@ -1,0 +1,121 @@
+#approach {
+	margin: 5%;
+	margin-left: 50%;
+}
+
+.icon {
+	height: 100px;
+	width: 100px;
+	margin: 25px;
+	transition: all 0.5s ease;
+}
+.icon:hover {
+	height: 150px;
+	width: 150px;
+}
+
+.cover {
+	height: 100vh;
+	background-image: url('./resources/ivan-jevtic-AL3Cbxp8css-unsplash.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.cover-header-text,
+.cover-subheader-text {
+	color: white;
+}
+
+.cover-header-text {
+	font-size: 5rem;
+	font-weight: bolder;
+}
+
+.cover-header-text {
+	font-size: 2rem;
+}
+
+.header-text {
+	color: black;
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+.p-text {
+	color: black;
+	font-size: 1rem;
+}
+
+.about-me-content-left {
+	width: 30vw;
+	margin-right: 50px;
+}
+
+#abilities {
+	background-color: #ffffff;
+}
+
+#projects {
+	background-color: #121a1d;
+	color: white;
+}
+
+#experience {
+	background-color: #53ceff;
+}
+
+.animate-from-left-fade {
+	animation: fly-in-from-left 0.4s ease-in-out backwards;
+}
+
+@keyframes fly-in-from-left {
+	0% {
+		transform: translate(-100px, -100px) rotate(-90deg) scale(0.5);
+	}
+
+	100% {
+		transform: none;
+	}
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.projects-container img {
+	width: 350px;
+	height: 100%;
+	margin: 30px;
+	object-fit: cover;
+
+	transform-origin: center;
+	transform: perspective(800px) rotateY(25deg);
+	transition: 0.5s;
+}
+.projects-container {
+	max-width: 600px;
+	max-height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container:hover img {
+	opacity: 0.3;
+}
+.container img:hover {
+	transform: perspective(800px) rotateY(0deg);
+	opacity: 1;
+}
+
+.overlay {
+	display: none;
+}
+
+.container:hover .overlay {
+	display: block;
+}
