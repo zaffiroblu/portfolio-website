@@ -2,17 +2,17 @@
 import { useState } from 'react';
 
 export const NavBar = () => {
-	const [showNavBar, setShowNavBar] = useState(false);
+	const [showSideNavBar, setShowSideNavBar] = useState(false);
 
 	function handleClick() {
-		setShowNavBar(!showNavBar);
+		setShowSideNavBar(!showSideNavBar);
 	}
 
 	return (
 		<header id='header'>
 			<nav
 				id='header_main-nav'
-				className={`${showNavBar ? 'clicked' : ''}`}
+				className={`${showSideNavBar ? 'clicked' : ''}`}
 			>
 				<div
 					className='header_main-nav-hamburger'
@@ -23,19 +23,19 @@ export const NavBar = () => {
 					<div className='line line3'></div>
 				</div>
 				<ul className='header_main-nav-links'>
-					<li className={`${showNavBar ? 'clicked' : ''}`}>
+					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
 						<a href='#'>Home</a>
 					</li>
-					<li className={`${showNavBar ? 'clicked' : ''}`}>
+					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
 						<a href='#'>About Me</a>
 					</li>
-					<li className={`${showNavBar ? 'clicked' : ''}`}>
+					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
 						<a href='#'>Abilities</a>
 					</li>
-					<li className={`${showNavBar ? 'clicked' : ''}`}>
+					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
 						<a href='#'>Projects</a>
 					</li>
-					<li className={`${showNavBar ? 'clicked' : ''}`}>
+					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
 						<a href='#'>Contact</a>
 					</li>
 				</ul>

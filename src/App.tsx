@@ -4,6 +4,7 @@ import './App.scss';
 import AboutMe from './components/AboutMe';
 // import Contact from './components/Contact';
 import CoverSection from './components/CoverSection';
+import { MoreAboutMe } from './components/MoreAboutMe';
 // import Experience from './components/Experience';
 import { NavBar } from './components/NavBar';
 // import Projects from './components/Projects';
@@ -13,7 +14,9 @@ function App() {
 		<div className='App'>
 			<NavBar />
 			<CoverSection />
-			{/* <AboutMe /> */}
+			<AboutMe />
+			<MoreAboutMe />
+			<AboutMe />
 			{/* <Abilities /> */}
 			{/* <Projects /> */}
 			{/* <Experience />

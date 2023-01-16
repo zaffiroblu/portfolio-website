@@ -7,7 +7,9 @@
 	--TC1: rgb(255, 174, 0);
 	--TC2: rgb(24 79 89);
 	--TC3: rgb(255, 174, 0, 0.5);
-	--TC4: rgb(53, 83, 163, 0.5);
+	--TC4: rgb(24 79 89, 0.5);
+	--TC5: rgb(105, 47, 96);
+	--TC6: rgb(105, 47, 96, 0.5);
 
 	.light-theme {
 		--app-bg-col: linear-gradient(
@@ -56,11 +58,6 @@ a:active {
 }
 
 /*_*_*_*_*_*_*_*_*_*_Old Code_*_*_*_*_*_*_*_*_*_*_*_*_*/
-
-#approach {
-	margin: 5%;
-	margin-left: 50%;
-}
 
 .icon {
 	height: 100px;
@@ -131,11 +128,11 @@ a:active {
 }
 
 .overlay {
-	display: none;
+	visibility: hidden;
 }
 
 .container:hover .overlay {
-	display: block;
+	visibility: visible;
 }
 
 /*_*_*_*_*_*_*_*_*_*_Main Nav_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -168,7 +165,7 @@ ul.header_main-nav-links li {
 ul.header_main-nav-links li a {
 	position: relative;
 	padding: 0.2rem, 0.6rem;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 ul.header_main-nav-links li a:link::before,
@@ -209,7 +206,7 @@ ul.header_main-nav-links li a:active::after {
 @media screen and (max-width: 610px) {
 	/*_*_*_*_*_*_*_*_*_*_Main Nav_*_*_*_*_*_*_*_*_*_*_*_*_*/
 	header#header {
-		position: fixed;
+		position: absolute;
 	}
 
 	nav#header_main-nav {
@@ -225,11 +222,11 @@ ul.header_main-nav-links li a:active::after {
 	}
 
 	nav#header_main-nav.clicked {
-		left: 50%;
+		left: 40%;
 	}
 
 	.clicked .line1 {
-		transform: rotateZ(-45deg) translate(-0.8rem, 0.2rem);
+		transform: rotateZ(-45deg) translate(-0.5rem, 0.2rem);
 		transition: 0.7s;
 	}
 
@@ -239,7 +236,7 @@ ul.header_main-nav-links li a:active::after {
 	}
 
 	.clicked .line3 {
-		transform: rotateZ(45deg) translate(-0.8rem, -0.2rem);
+		transform: rotateZ(45deg) translate(-0.5rem, -0.2rem);
 		transition: 0.7s;
 	}
 
@@ -250,8 +247,8 @@ ul.header_main-nav-links li a:active::after {
 	}
 
 	.header_main-nav-hamburger {
-		width: 4rem;
-		height: 4rem;
+		width: 3.5rem;
+		height: 3.5rem;
 		position: fixed;
 		top: 1rem;
 		right: 1rem;
@@ -265,7 +262,7 @@ ul.header_main-nav-links li a:active::after {
 	}
 	.line {
 		width: 100%;
-		height: 0.3rem;
+		height: 0.2rem;
 		background-color: white;
 		border-radius: 0.2rem;
 		transition: all 0.4sec ease-in-out;
@@ -414,18 +411,23 @@ div#cover-section-content {
 	transform-origin: left;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
 	header#header {
-		height: calc(4vw + 7vh);
+		height: calc(4vw + 5vh);
+	}
+
+	div#cover-section {
+		background-position: 0px 70px;
 	}
 }
 
-@media screen and (max-width: 750px) {
-	div#cover-section {
-		background-position: 0px 30px;
-	}
+@media screen and (max-width: 1100px) {
 	header#header {
 		height: calc(3vw + 5vh);
+	}
+
+	div#cover-section {
+		background-position: 0px 30px;
 	}
 }
 
@@ -468,8 +470,192 @@ div#cover-section-content {
 @media (max-aspect-ratio: 1/1) {
 	div#cover-section {
 		background-image: url('./resources/jen-portrait.jpg');
-		background-position: center 30px;
+		background-position: center;
 		justify-content: flex-start;
 		align-items: end;
+	}
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 650px) {
+	header#header {
+		height: calc(2vw + 2vh);
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_About Me Section_*_*_*_*_*_*_*_*_*_*_*_*_*/
+#about-me {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	background-color: var(--TC5);
+}
+
+.about-me-img,
+.about-me-content {
+	flex-basis: 25rem;
+	flex-grow: 1;
+}
+
+.about-me-img {
+	display: flex;
+	justify-content: center;
+}
+
+.about-me-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	padding: 2rem;
+	padding-right: 7rem;
+}
+
+.about-me-img img {
+	width: 65%;
+	height: auto;
+	object-fit: cover;
+	animation: fadein2 2s;
+}
+
+@keyframes fadein2 {
+	0% {
+		filter: opacity(0);
+	}
+
+	100% {
+		filter: opacity(1);
+	}
+}
+
+.about-me-title {
+	font-size: calc(1.5rem + 1vw);
+	padding: 1rem 0;
+	position: relative;
+}
+
+// .about-me-title:after {
+// 	content: '';
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	height: 0.1rem;
+// 	width: 50%;
+// 	background-color: white;
+// }
+
+.about-me-title,
+.about-me-para {
+	margin-bottom: 1.5rem;
+	letter-spacing: 0.2rem;
+}
+
+.about-me-para {
+	font-size: calc(0.4rem + 0.8vw);
+	font-weight: 600;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+.about-me-link:link,
+.about-me-link:visited {
+	padding: 1rem 0;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+	width: -moz-fit-content;
+	width: fit-content;
+	padding-left: 2px;
+}
+
+.about-me-link:link::after,
+.about-me-link:visited::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--TC2);
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+	z-index: -1;
+}
+
+.about-me-link:hover::after,
+.about-me-link:active::after {
+	transform: scaleY(1);
+	transform-origin: top;
+}
+
+/*_*_*_*_*_*_*_*_*_*_About Me Section -- Breakpoint max-width 750px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (max-width: 800px) {
+	.about-me-content {
+		padding-right: 2rem;
+	}
+	.about-me-para {
+		font-size: calc(0.8rem + 0.8vw);
+		letter-spacing: 0px;
+	}
+	.about-me-img img {
+		padding-bottom: 25px;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_More About Me Section_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+#more-about-me {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	background-color: var(--TC2);
+	padding: 4rem;
+}
+
+.more-about-me_3-words {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.mam-container {
+	padding: 25px;
+}
+
+.mam-container:hover .overlay {
+	visibility: visible;
+	animation: fadein2 2s;
+}
+
+.mam-header {
+	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+	padding: 1rem 0;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.overlay {
+	transition: ease-out;
+}
+
+@media screen and (max-width: 915px) {
+	.mam-header {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.more-about-me_3-words {
+		flex-wrap: wrap;
 	}
 }
