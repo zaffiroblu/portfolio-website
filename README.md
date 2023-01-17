@@ -1,4 +1,8 @@
-Space Background Photo: Photo by Ivan Jevtic on Unsplash: https://unsplash.com/photos/AL3Cbxp8css
+Contact Background Photo: Photo by Vandan Patel on Unsplash: https://unsplash.com/photos/TPn8jvj4PYo
+
+Contact (PC and code) Background Photo by: Clément Hélardot on Unsplash: https://unsplash.com/photos/95YRwf6CNw8
+
+Contact (Woman hands) Backgroud Photo by: Sergey Zolkin on Unsplash: https://unsplash.com/photos/_UeY8aTI6d0
 
 HTML Icon: Icon by Raj Dev on freeicons.io: https://freeicons.io/flat-logos/html-icon-18437
 

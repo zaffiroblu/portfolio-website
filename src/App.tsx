@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.scss';
-// import Abilities from './components/Abilities';
+import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
-// import Contact from './components/Contact';
+import Contact from './components/Contact';
 import CoverSection from './components/CoverSection';
-import { MoreAboutMe } from './components/MoreAboutMe';
 // import Experience from './components/Experience';
 import { NavBar } from './components/NavBar';
 // import Projects from './components/Projects';
@@ -15,12 +14,10 @@ function App() {
 			<NavBar />
 			<CoverSection />
 			<AboutMe />
-			<MoreAboutMe />
-			<AboutMe />
-			{/* <Abilities /> */}
+			<Skills />
 			{/* <Projects /> */}
-			{/* <Experience />
-			<Contact /> */}
+			{/* <Experience />*/}
+			<Contact />
 		</div>
 	);
 }

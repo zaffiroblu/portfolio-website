@@ -9,7 +9,8 @@
 	--TC3: rgb(255, 174, 0, 0.5);
 	--TC4: rgb(24 79 89, 0.5);
 	--TC5: rgb(105, 47, 96);
-	--TC6: rgb(105, 47, 96, 0.5);
+	--TC6: rgb(105, 47, 96, 0.9);
+	--TC7: rgb(255, 174, 0, 0.9);
 
 	.light-theme {
 		--app-bg-col: linear-gradient(
@@ -33,6 +34,8 @@
 body {
 	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 	line-height: 1.6;
+	color: white;
+	scroll-behavior: smooth;
 }
 
 /*_*_*_*_*_*_*_*_*_*_List Items_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -59,44 +62,9 @@ a:active {
 
 /*_*_*_*_*_*_*_*_*_*_Old Code_*_*_*_*_*_*_*_*_*_*_*_*_*/
 
-.icon {
-	height: 100px;
-	width: 100px;
-	margin: 25px;
-	transition: transform 0.35s ease-in-out;
-}
-.icon:hover {
-	transform: scale(1.25);
-}
-
-.header-text {
-	color: black;
-	font-size: 2rem;
-	font-weight: bolder;
-}
-
-.p-text {
-	color: black;
-	font-size: 1rem;
-}
-
-.about-me-content-left {
-	width: 30vw;
-	margin-right: 50px;
-}
-
-#abilities {
-	background-color: #ffffff;
-}
-
 #projects {
 	background-color: #121a1d;
 	color: white;
-}
-
-#experience {
-	color: white;
-	background-color: var(--TC3);
 }
 
 .projects-container img {
@@ -348,16 +316,13 @@ div#cover-section-content {
 }
 
 .cover-section-content-title {
-	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 	font-size: calc(2rem + 3vw);
-	color: white;
 }
 
 .cover-section-content-para {
 	font-family: 'Lato', Arial, Helvetica, sans-serif;
 	font-weight: 700;
 	font-size: calc(1.5rem + 1vw);
-	color: white;
 }
 
 .cover-section-content-link:link,
@@ -437,9 +402,7 @@ div#cover-section-content {
 		align-items: flex-end;
 	}
 	.cover-section-content-title {
-		font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 		font-size: calc(2rem + 2vw);
-		color: white;
 	}
 	.cover-section-content-para {
 		font-size: calc(0.8rem + 1vw);
@@ -506,7 +469,6 @@ div#cover-section-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	color: white;
 	padding: 2rem;
 	padding-right: 7rem;
 }
@@ -534,20 +496,19 @@ div#cover-section-content {
 	position: relative;
 }
 
-// .about-me-title:after {
-// 	content: '';
-// 	position: absolute;
-// 	bottom: 0;
-// 	left: 0;
-// 	height: 0.1rem;
-// 	width: 50%;
-// 	background-color: white;
+// .mam-header {
+// 	padding: 1rem 0;
+// 	font-size: 1.5rem;
+// 	font-weight: 600;
+// 	letter-spacing: 0.2rem;
+// 	text-transform: uppercase;
+// 	text-align: center;
 // }
 
 .about-me-title,
 .about-me-para {
-	margin-bottom: 1.5rem;
-	letter-spacing: 0.2rem;
+	margin-bottom: 1.2rem;
+	letter-spacing: 0.1rem;
 }
 
 .about-me-para {
@@ -599,7 +560,6 @@ div#cover-section-content {
 	}
 	.about-me-para {
 		font-size: calc(0.8rem + 0.8vw);
-		letter-spacing: 0px;
 	}
 	.about-me-img img {
 		padding-bottom: 25px;
@@ -613,7 +573,6 @@ div#cover-section-content {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	color: white;
 	background-color: var(--TC2);
 	padding: 4rem;
 }
@@ -635,17 +594,12 @@ div#cover-section-content {
 }
 
 .mam-header {
-	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 	padding: 1rem 0;
 	font-size: 1.5rem;
 	font-weight: 600;
 	letter-spacing: 0.2rem;
 	text-transform: uppercase;
 	text-align: center;
-}
-
-.overlay {
-	transition: ease-out;
 }
 
 @media screen and (max-width: 915px) {
@@ -657,5 +611,247 @@ div#cover-section-content {
 @media screen and (max-width: 750px) {
 	.more-about-me_3-words {
 		flex-wrap: wrap;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Skills Section_*_*_*_*_*_*_*_*_*_*_*_*_*/
+#abilities {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--TC1);
+}
+
+.abilities-content {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#abilities-column-1,
+#abilities-column-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-basis: 25rem;
+	flex-grow: 1;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#abilities-column-3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+#abilities-column-1 {
+	border-right: 1px dashed white;
+}
+
+#abilities-languages-frameworks,
+#abilities-development-tools,
+.additional-skills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.additional-skills {
+	padding: 2rem;
+}
+
+.icon {
+	height: 100px;
+	width: 100px;
+	margin: 25px;
+	transition: transform 0.35s ease-in-out;
+	background-color: white;
+	padding: 10px;
+	border-radius: 2px;
+	// I am not sure about this down here!
+	flex-basis: 100px;
+	flex-grow: 1;
+}
+.icon:hover {
+	transform: scale(1.25);
+}
+
+.skills-icon-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skills-icon-container:hover .overlay {
+	visibility: visible;
+	animation: fadein2 2s;
+}
+
+.icon-caption {
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.additional-skills-container {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	flex-basis: 30rem;
+	flex-grow: 1;
+}
+
+.skills-caption {
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	width: 50%;
+	text-transform: uppercase;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.skills-dot-container {
+	display: flex;
+	align-items: center;
+}
+
+.dot {
+	height: 15px;
+	width: 15px;
+	background-color: var(--TC5);
+	border-radius: 50%;
+	display: inline-block;
+	margin: 5px;
+}
+
+/*_*_*_*_*_*_*_*_*_*_Skills Section Breakpoint min-width: 1500px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (min-width: 1500px) {
+	.additional-skills-container {
+		flex-basis: 40rem;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Skills Section Breakpoint min-width: 2000px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (min-width: 2000px) {
+	.additional-skills-container {
+		flex-basis: 55rem;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Skills Section Breakpoint max-width: 800px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (max-width: 800px) {
+	.abilities-content {
+		flex-wrap: wrap;
+	}
+
+	#abilities-column-1 {
+		border-right: none;
+	}
+	#abilities-column-3 {
+		border-top: 1px dashed white;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Skills Section Breakpoint max-width: 550px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (max-width: 550px) {
+	#abilities-column-3 {
+		padding: 1rem;
+	}
+	.icon-caption,
+	.skills-caption {
+		font-size: 0.6rem;
+	}
+
+	.additional-skills {
+		padding: 0rem;
+	}
+
+	.dot {
+		height: 12px;
+		width: 12px;
+		margin: 3px;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Contact Section_*_*_*_*_*_*_*_*_*_*_*_*_*/
+div#contact {
+	height: 100vh;
+	background-image: url('./resources/clement-unsplash.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+div#contact-section-content {
+	background-color: var(--TC7);
+	padding: calc(3rem + 2vw);
+	height: calc(25rem + 20vmax);
+	width: 35rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.contact-content-link:link,
+.contact-content-link:visited {
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	padding: 0.8rem 0.2rem;
+	transition: all 0.5s ease-in-out;
+	width: fit-content;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	position: relative;
+	z-index: 1;
+}
+
+.contact-content-link:link::after,
+.contact-content-link:visited::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--TC2);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+	z-index: -1;
+}
+
+.contact-content-link:hover::after,
+.contact-content-link:active::after {
+	transform: scale(1);
+	transform-origin: left;
+}
+
+@media screen and (max-width: 650px) {
+	.contact-content-link:link,
+	.contact-content-link:visited {
+		font-size: 0.8rem;
+		letter-spacing: 0.1rem;
+	}
+
+	div#contact-section-content {
+		padding: calc(2rem + 1vw);
+		height: calc(15rem + 15vmax);
+		width: 20rem;
 	}
 }
