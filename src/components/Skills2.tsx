@@ -1,8 +1,8 @@
 const Skills2 = () => {
 	return (
-		<div className='abilities-content-2'>
-			<div id='abilities-column-3'>
-				<div className='mam-header'>Additional Abilities</div>
+		<div className='skills-container-2'>
+			<div id='skills-column-3'>
+				<div className='section-subheader'>Additional skills</div>
 				<div className='additional-skills'>
 					<div className='additional-skills-container'>
 						<div className='skills-caption'>
@@ -48,7 +48,6 @@ const Skills2 = () => {
 							<span className='dot'></span>
 							<span className='dot'></span>
 							<span className='dot'></span>
-							<span className='dot'></span>
 						</div>
 					</div>
 					<div className='additional-skills-container'>
@@ -66,6 +65,8 @@ const Skills2 = () => {
 							Instructional copywriting
 						</div>
 						<div className='skills-dot-container'>
+							<span className='dot'></span>
+							<span className='dot'></span>
 							<span className='dot'></span>
 							<span className='dot'></span>
 							<span className='dot'></span>

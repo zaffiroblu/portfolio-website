@@ -6,7 +6,7 @@ import Contact from './components/Contact';
 import CoverSection from './components/CoverSection';
 // import Experience from './components/Experience';
 import { NavBar } from './components/NavBar';
-// import Projects from './components/Projects';
+import Projects from './components/Projects';
 
 function App() {
 	return (
@@ -15,7 +15,7 @@ function App() {
 			<CoverSection />
 			<AboutMe />
 			<Skills />
-			{/* <Projects /> */}
+			<Projects />
 			{/* <Experience />*/}
 			<Contact />
 		</div>

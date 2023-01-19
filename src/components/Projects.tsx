@@ -1,76 +1,151 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import CvGenerator from '../resources/Screenshot_CV-Generator.png';
+import WeatherApp from '../resources/Screenshot_weather-app.png';
+import WVSite from '../resources/Screenshot_Wahlverwandtschaften.png';
+import RPS from '../resources/Screenshot_RPS.png';
+import Calc from '../resources/Screenshot_calculator.png';
+import TTT from '../resources/Screenshot_TTT.png';
 
 export const Projects = () => {
 	return (
-		<div
-			className='d-flex flex-column justify-content-center align-items-center'
-			id='projects'
-		>
-			<div className='animate-from-left-fade cover-header-text'>
-				Projects
-			</div>
-			<div className='d-flex flex-column justify-content-center align-items-center'>
-				<div className='projects-container'>
-					<div className='container'>
+		<div id='projects'>
+			<h2 className='section-header'>Projects</h2>
+			<div id='projects-content-container'>
+				<div className='project-container'>
+					<div className='project-container-image'>
 						<img
 							src={CvGenerator}
-							alt='CV-Project'
+							alt='CV Generator App'
 							id='cv-project'
 						/>
-						<div className='overlay cover-subheader-text'>
-							CV Generator
-						</div>
 					</div>
-					<div className='container'>
-						<img
-							src={CvGenerator}
-							alt='CV-Project'
-							id='cv-project'
-						/>
-						<div className='overlay cover-subheader-text'>
-							Weather App
-						</div>
-					</div>
-					<div className='container'>
-						<img
-							src={CvGenerator}
-							alt='CV-Project'
-							id='cv-project'
-						/>
-						<div className='overlay cover-subheader-text'>
-							Wahlverwandtschaften Website
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>CV Generator</h3>
+						<p className='para-text'>
+							This is my first project using React Typescript!
+						</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
 						</div>
 					</div>
 				</div>
-				<div className='projects-container'>
-					<div className='container'>
+				<div className='project-container'>
+					<div className='project-container-image'>
 						<img
-							src={CvGenerator}
-							alt='CV-Project'
-							id='cv-project'
+							src={WeatherApp}
+							alt='Weather-App'
+							id='weather-app'
 						/>
-						<div className='overlay cover-subheader-text'>
-							Rock, Paper, Scissors
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>Weather App</h3>
+						<p className='para-text'>
+							This was my first project in React.
+						</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
 						</div>
 					</div>
-					<div className='container'>
+				</div>
+				<div className='project-container'>
+					<div className='project-container-image'>
 						<img
-							src={CvGenerator}
-							alt='CV-Project'
-							id='cv-project'
+							src={WVSite}
+							alt='Wahlverwandtschaften Website'
+							id='wv-website'
 						/>
-						<div className='overlay cover-subheader-text'>
-							Calculator
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>WV Website</h3>
+						<p className='para-text'>
+							This is the first time I started splitting my code
+							into components.
+						</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
 						</div>
 					</div>
-					<div className='container'>
+				</div>
+				<div className='project-container'>
+					<div className='project-container-image'>
 						<img
-							src={CvGenerator}
-							alt='CV-Project'
-							id='cv-project'
+							src={RPS}
+							alt='Rock, Paper and Scissors Project'
+							id='rps-project'
 						/>
-						<div className='overlay cover-subheader-text'>
-							Tic-Tac-Toe
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>Rock, Paper, Scissors</h3>
+						<p className='para-text'>Can you beat the computer?</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className='project-container'>
+					<div className='project-container-image'>
+						<img
+							src={Calc}
+							alt='Calculator Project'
+							id='calculator-project'
+						/>
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>Calculator</h3>
+						<p className='para-text'>
+							A pretty nifty, simple calculator.
+						</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className='project-container'>
+					<div className='project-container-image'>
+						<img
+							src={TTT}
+							alt='Tic-Tac-Toe Project'
+							id='ttt-project'
+						/>
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>Tic-Tac-Toe</h3>
+						<p className='para-text'>
+							Here is a tic-tac-toe game to play with a friend
+							when you don't have spare paper.
+						</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
 						</div>
 					</div>
 				</div>

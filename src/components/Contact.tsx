@@ -5,18 +5,21 @@ export const Contact = () => {
 			<div id='contact-section-content'>
 				<h1 className='content-section-content-title'>Contact Me!</h1>
 				<a href='#' className='contact-content-link'>
-					jenshivel@gmail.com
+					Email
 				</a>
 				<a href='#' className='contact-content-link'>
-					linkedin.com/in/jenshivel
+					LinkedIn
 				</a>
 				<a href='#' className='contact-content-link'>
-					https://github.com/zaffiroblu
+					GitHub
 				</a>
 				<a href='#' className='contact-content-link'>
-					CV (created with my CV Generator App!)
+					Download CV (made with my generator)
 				</a>
-				<a href='http://www.google.com' className='contact_button'>
+				<a
+					href='http://www.google.com'
+					className='contact-content-link'
+				>
 					Impressum
 				</a>
 			</div>

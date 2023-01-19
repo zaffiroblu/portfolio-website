@@ -24,19 +24,19 @@ export const NavBar = () => {
 				</div>
 				<ul className='header_main-nav-links'>
 					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
-						<a href='#'>Home</a>
+						<a href='#cover-section'>Home</a>
 					</li>
 					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
-						<a href='#'>About Me</a>
+						<a href='#about-me'>About Me</a>
 					</li>
 					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
-						<a href='#'>Abilities</a>
+						<a href='#skills'>Skills</a>
 					</li>
 					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
-						<a href='#'>Projects</a>
+						<a href='#projects'>Projects</a>
 					</li>
 					<li className={`${showSideNavBar ? 'clicked' : ''}`}>
-						<a href='#'>Contact</a>
+						<a href='#contact'>Contact</a>
 					</li>
 				</ul>
 			</nav>

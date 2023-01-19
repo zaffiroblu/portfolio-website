@@ -4,7 +4,6 @@ import JavaScriptIcon from '../resources/JavaScript.svg';
 import TypeScriptIcon from '../resources/typescript.svg';
 import ReactIcon from '../resources/react.svg';
 import BootstrapIcon from '../resources/bootstrap.svg';
-import SassIcon from '../resources/sass.svg';
 import GitIcon from '../resources/git.svg';
 import GitHubIcon from '../resources/github.svg';
 import npmIcon from '../resources/npm.svg';
@@ -15,12 +14,14 @@ import Skills2 from './Skills2';
 
 const Skills = () => {
 	return (
-		<div id='abilities'>
-			<h2 className='about-me-title'>Skills</h2>
-			<div className='abilities-content'>
-				<div id='abilities-column-1'>
-					<div className='mam-header'>Languages and Frameworks</div>
-					<div id='abilities-languages-frameworks'>
+		<div id='skills'>
+			<h2 className='section-header'>Skills</h2>
+			<div id='skills-container-1'>
+				<div id='skills-column-1'>
+					<div className='section-subheader'>
+						Languages and Frameworks
+					</div>
+					<div id='skills-languages-frameworks'>
 						<div className='skills-icon-container'>
 							<img
 								src={HTMLicon}
@@ -67,14 +68,6 @@ const Skills = () => {
 						</div>
 						<div className='skills-icon-container'>
 							<img
-								src={SassIcon}
-								alt='Sass icon'
-								className='icon'
-							/>
-							<div className='overlay icon-caption'>SASS</div>
-						</div>
-						<div className='skills-icon-container'>
-							<img
 								src={BootstrapIcon}
 								alt='Bootstrap icon'
 								className='icon'
@@ -85,9 +78,9 @@ const Skills = () => {
 						</div>
 					</div>
 				</div>
-				<div id='abilities-column-2'>
-					<div className='mam-header'>Development Tools</div>
-					<div id='abilities-development-tools'>
+				<div id='skills-column-2'>
+					<div className='section-subheader'>Development Tools</div>
+					<div id='skills-development-tools'>
 						<div className='skills-icon-container'>
 							<img
 								src={GitIcon}

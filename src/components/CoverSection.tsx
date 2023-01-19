@@ -10,9 +10,9 @@ export const CoverSection = () => {
 				<p className='cover-section-content-para'>
 					Junior Frontend Developer
 				</p>
-				<a href='#' className='cover-section-content-link'>
+				{/* <a href='#' className='cover-section-content-link'>
 					My work
-				</a>
+				</a> */}
 			</div>
 		</div>
 	);
