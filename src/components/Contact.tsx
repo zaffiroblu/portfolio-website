@@ -3,7 +3,7 @@ export const Contact = () => {
 	return (
 		<div id='contact'>
 			<div id='contact-section-content'>
-				<h1 className='content-section-content-title'>Contact Me!</h1>
+				<h2 className='section-header'>Contact Me!</h2>
 				<a href='#' className='contact-content-link'>
 					Email
 				</a>
@@ -14,12 +14,9 @@ export const Contact = () => {
 					GitHub
 				</a>
 				<a href='#' className='contact-content-link'>
-					Download CV (made with my generator)
+					Download CV
 				</a>
-				<a
-					href='http://www.google.com'
-					className='contact-content-link'
-				>
+				<a href='#' className='contact-content-link'>
 					Impressum
 				</a>
 			</div>

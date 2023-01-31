@@ -2,7 +2,7 @@ const Skills2 = () => {
 	return (
 		<div className='skills-container-2'>
 			<div id='skills-column-3'>
-				<div className='section-subheader'>Additional skills</div>
+				<div className='section-subheader'>Additional Skills</div>
 				<div className='additional-skills'>
 					<div className='additional-skills-container'>
 						<div className='skills-caption'>

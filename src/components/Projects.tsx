@@ -22,7 +22,7 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>CV Generator</h3>
 						<p className='para-text'>
-							This is my first project using React Typescript!
+							Built with React Typescript.
 						</p>
 						<div className='project-links-container'>
 							<a href='#' className='project-link'>
@@ -45,7 +45,8 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>Weather App</h3>
 						<p className='para-text'>
-							This was my first project in React.
+							Responsive design, built with the OpenWeatherMap API
+							and React.
 						</p>
 						<div className='project-links-container'>
 							<a href='#' className='project-link'>
@@ -68,8 +69,8 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>WV Website</h3>
 						<p className='para-text'>
-							This is the first time I started splitting my code
-							into components.
+							For the 'Wahlverwandtschaften' group in Berlin,
+							built with JavaScript components.
 						</p>
 						<div className='project-links-container'>
 							<a href='#' className='project-link'>
@@ -91,29 +92,9 @@ export const Projects = () => {
 					</div>
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>Rock, Paper, Scissors</h3>
-						<p className='para-text'>Can you beat the computer?</p>
-						<div className='project-links-container'>
-							<a href='#' className='project-link'>
-								Live Demo
-							</a>
-							<a href='#' className='project-link'>
-								GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-				<div className='project-container'>
-					<div className='project-container-image'>
-						<img
-							src={Calc}
-							alt='Calculator Project'
-							id='calculator-project'
-						/>
-					</div>
-					<div className='project-container-text'>
-						<h3 className='icon-caption'>Calculator</h3>
 						<p className='para-text'>
-							A pretty nifty, simple calculator.
+							Can you beat this mobile game, built in vanilla
+							JavaScript?
 						</p>
 						<div className='project-links-container'>
 							<a href='#' className='project-link'>
@@ -136,8 +117,32 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>Tic-Tac-Toe</h3>
 						<p className='para-text'>
-							Here is a tic-tac-toe game to play with a friend
-							when you don't have spare paper.
+							A JavaScript game to play with a friend when you
+							don't have spare paper.
+						</p>
+						<div className='project-links-container'>
+							<a href='#' className='project-link'>
+								Live Demo
+							</a>
+							<a href='#' className='project-link'>
+								GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className='project-container'>
+					<div className='project-container-image'>
+						<img
+							src={Calc}
+							alt='Calculator Project'
+							id='calculator-project'
+						/>
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>Calculator</h3>
+						<p className='para-text'>
+							A pretty nifty calculator, built in simple
+							JavaScript.
 						</p>
 						<div className='project-links-container'>
 							<a href='#' className='project-link'>

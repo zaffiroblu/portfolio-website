@@ -42,15 +42,40 @@ body {
 	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 	line-height: 1.6;
 	color: white;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
-/*_*_*_*_*_*_*_*_*_*_List Items_*_*_*_*_*_*_*_*_*_*_*_*_*/
+/*_*_*_*_*_*_*_*_*_*_Headers, subheaders, etc._*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+.section-header {
+	font-size: calc(1.5rem + 1vw);
+	padding: 1rem 0;
+	position: relative;
+}
+
+.section-header,
+.para-text {
+	margin-bottom: 1.2rem;
+	letter-spacing: 0.1rem;
+}
+
+.section-subheader {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.para-text {
+	font-size: calc(0.6rem + 0.8vw);
+	font-weight: 600;
+	font-family: 'Lato', Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
 
 li {
 	list-style: none;
 }
 
-/*_*_*_*_*_*_*_*_*_*_Anchor Tags_*_*_*_*_*_*_*_*_*_*_*_*_*/
 a:link,
 a:visited {
 	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
@@ -66,12 +91,65 @@ a:active {
 	color: white;
 }
 
+/*_*_*_*_*_*_*_*_*_*_Headers, subheaders, paragraphs BREAKPOINT max-width: 575px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (max-width: 575px) {
+	.section-header {
+		margin-bottom: 0px;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Headers, subheaders, paragraphs BREAKPOINT min-width: 576px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (min-width: 576px) {
+	.section-header {
+		margin-bottom: 0px;
+	}
+	.section-subheader {
+		font-size: 1.5rem;
+	}
+	.para-text {
+		font-size: calc(0.8rem + 0.8vw);
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Headers, subheaders, paragraphs BREAKPOINT min-width: 768px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (min-width: 768px) {
+	.section-header {
+		margin-bottom: 1.2rem;
+	}
+
+	.section-subheader {
+		font-size: 1.3rem;
+	}
+
+	.para-text {
+		font-size: calc(0.6rem + 0.6vw);
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Headers, subheaders, paragraphs BREAKPOINT min-width: 1200px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media screen and (min-width: 1200px) {
+	.para-text {
+		font-size: calc(0.7rem + 0.6vw);
+	}
+
+	.section-subheader {
+		font-size: 1.8rem;
+	}
+}
+
 /*_*_*_*_*_*_*_*_*_*_Main Nav_*_*_*_*_*_*_*_*_*_*_*_*_*/
 header#header {
 	background-color: var(--blue-1);
 	z-index: 2;
 	position: fixed;
 	width: 100%;
+	max-width: 1920px;
+	-webkit-box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.25);
 }
 
 nav#header_main-nav {
@@ -261,6 +339,9 @@ ul.header_main-nav-links li a:active::after {
 	header#header {
 		height: var(--header-min-w-1200);
 	}
+	ul.header_main-nav-links li a {
+		font-size: 1.6rem;
+	}
 }
 
 /*_*_*_*_*_*_*_*_*_*_Main Header BREAKPOINT min-width: 1400px_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -378,17 +459,6 @@ div#cover-section-content {
 	transform-origin: left;
 }
 
-/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT max-aspect-ratio: 1/1*_*_*_*_*_*_*_*_*_*_*_*_*/
-
-@media (max-aspect-ratio: 1/1) {
-	div#cover-section {
-		background-image: url('./resources/jen-portrait.jpg');
-		background-position: center;
-		justify-content: flex-start;
-		align-items: end;
-	}
-}
-
 /*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT max-height 450px*_*_*_*_*_*_*_*_*_*_*_*_*/
 
 @media screen and (max-height: 450px) {
@@ -423,19 +493,45 @@ div#cover-section-content {
 	}
 }
 
-/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT min-width 576px*_*_*_*_*_*_*_*_*_*_*_*_*/
+/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT aspect ratio 1/1 AND max-width 575px*_*_*_*_*_*_*_*_*_*_*_*_*/
 
+@media (max-aspect-ratio: 1/1) and (max-width: 575px) {
+	div#cover-section {
+		background-image: url('./resources/jen-portrait.jpg');
+		background-position: center;
+		justify-content: flex-start;
+		align-items: end;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT min-width 576px*_*_*_*_*_*_*_*_*_*_*_*_*/
 @media screen and (min-width: 576px) {
 	div#cover-section {
 		background-position: 0px 30px;
 	}
 }
 
-/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT min-width 768px*_*_*_*_*_*_*_*_*_*_*_*_*/
+/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT aspect ratio 1/1 AND min-width 576px*_*_*_*_*_*_*_*_*_*_*_*_*/
 
-@media screen and (min-width: 768px) {
+@media (max-aspect-ratio: 1/1) and (min-width: 576px) {
 	div#cover-section {
-		background-position: 0px 40px;
+		background-image: url('./resources/jen-portrait.jpg');
+		background-position: center;
+		justify-content: flex-start;
+		align-items: end;
+	}
+
+	div#cover-section {
+		background-position: -250px 30px;
+	}
+}
+
+/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT aspect ratio 1/1 AND min-width 768px*_*_*_*_*_*_*_*_*_*_*_*_*/
+
+@media (max-aspect-ratio: 1/1) and (min-width: 768px) {
+	// add this rule for landscape, too!
+	div#cover-section {
+		background-position: -150px 40px;
 	}
 }
 
@@ -463,18 +559,6 @@ div#cover-section-content {
 	flex-wrap: wrap-reverse;
 	background-color: var(--purple-1);
 	padding-bottom: 3rem;
-}
-
-.section-header {
-	font-size: calc(1.5rem + 1vw);
-	padding: 1rem 0;
-	position: relative;
-}
-
-.section-header,
-.para-text {
-	margin-bottom: 1.2rem;
-	letter-spacing: 0.1rem;
 }
 
 .about-me-img,
@@ -512,12 +596,6 @@ div#cover-section-content {
 	}
 }
 
-.para-text {
-	font-size: calc(0.6rem + 0.8vw);
-	font-weight: 600;
-	font-family: 'Lato', Arial, Helvetica, sans-serif;
-	text-align: justify;
-}
 .about-me-link:link,
 .about-me-link:visited {
 	padding: 1rem 0;
@@ -563,9 +641,7 @@ div#cover-section-content {
 	.about-me-content {
 		padding-right: 2rem;
 	}
-	#about-me .para-text {
-		font-size: calc(0.8rem + 0.8vw);
-	}
+
 	.about-me-img img {
 		padding-bottom: 25px;
 	}
@@ -576,6 +652,13 @@ div#cover-section-content {
 @media screen and (min-width: 768px) {
 	#about-me {
 		scroll-margin-top: var(--header-min-w-768);
+		flex-wrap: nowrap;
+		padding: 2rem;
+	}
+
+	.about-me-content {
+		padding: 0;
+		padding-right: 3rem;
 	}
 }
 
@@ -584,6 +667,9 @@ div#cover-section-content {
 @media screen and (min-width: 992px) {
 	#about-me {
 		scroll-margin-top: var(--header-min-w-992);
+	}
+	.about-me-content {
+		padding-right: 5rem;
 	}
 }
 
@@ -739,16 +825,17 @@ div#cover-section-content {
 	#skills-column-1,
 	#skills-column-2,
 	#skills-column-3 {
+		padding-top: 2rem;
 		padding-bottom: 2rem;
+	}
+
+	#skills-column-1,
+	#skills-column-2 {
+		border-bottom: 1px dashed white;
 	}
 
 	#skills-column-3 {
 		padding: 1rem;
-	}
-
-	.section-subheader {
-		font-size: 1.2rem;
-		text-align: center;
 	}
 
 	.skills-icon-container {
@@ -778,11 +865,24 @@ div#cover-section-content {
 		scroll-margin-top: var(--header-min-w-576);
 	}
 
-	#skills-column-1 {
-		border-right: none;
+	#skills-container-1 {
+		flex-wrap: wrap;
 	}
+
+	#skills-column-1,
+	#skills-column-2,
 	#skills-column-3 {
-		border-top: 1px dashed white;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	#skills-column-1,
+	#skills-column-2 {
+		border-bottom: 1px dashed white;
+	}
+
+	#skills-column-3 {
+		padding: 1rem;
 	}
 }
 
@@ -791,11 +891,25 @@ div#cover-section-content {
 @media screen and (min-width: 768px) {
 	#skills {
 		scroll-margin-top: var(--header-min-w-768);
+		padding: 2rem;
+	}
+
+	#skills-container-1 {
+		flex-wrap: nowrap;
 	}
 
 	#skills-column-1 {
 		border-right: 1px dashed white;
 	}
+
+	#skills-column-1,
+	#skills-column-2 {
+		border-bottom: none;
+	}
+
+	// #skills-column-3 {
+	// 	border-top: 1px dashed white;
+	// }
 }
 
 /*_*_*_*_*_*_*_*_*_*_Skills Section BREAKPOINT  min-width: 992px_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -803,6 +917,14 @@ div#cover-section-content {
 @media screen and (min-width: 992px) {
 	#skills {
 		scroll-margin-top: var(--header-min-w-992);
+		padding: 5rem;
+	}
+	.additional-skills-container {
+		flex-basis: 20rem;
+		padding: 20px;
+	}
+	.section-subheader {
+		font-size: 1.5rem;
 	}
 }
 
@@ -812,13 +934,26 @@ div#cover-section-content {
 	#skills {
 		scroll-margin-top: var(--header-min-w-1200);
 	}
+	.additional-skills-container {
+		flex-basis: 25rem;
+	}
 }
 
 /*_*_*_*_*_*_*_*_*_*_Skills Section BREAKPOINT  min-width: 1400px_*_*_*_*_*_*_*_*_*_*_*_*_*/
 
 @media screen and (min-width: 1400px) {
+	.additional-skills {
+		padding: 0px;
+	}
+
 	.additional-skills-container {
-		flex-basis: 40rem;
+		flex-basis: 30rem;
+	}
+
+	.icon {
+		height: 115px;
+		width: 115px;
+		margin: 30px;
 	}
 }
 
@@ -826,7 +961,7 @@ div#cover-section-content {
 
 @media screen and (min-width: 1800px) {
 	.additional-skills-container {
-		flex-basis: 55rem;
+		flex-basis: 40rem;
 	}
 }
 
@@ -925,6 +1060,7 @@ div#cover-section-content {
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: transform 0.5s;
+	transition-delay: 0.4s;
 	z-index: -1;
 }
 
@@ -934,7 +1070,7 @@ div#cover-section-content {
 	transform-origin: left;
 }
 
-/*_*_*_*_*_*_*_*_*_*_Projects BREAKPOINT max-width: 300px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+/*_*_*_*_*_*_*_*_*_*_Projects BREAKPOINT max-width: 299px_*_*_*_*_*_*_*_*_*_*_*_*_*/
 
 @media screen and (max-width: 299px) {
 	#projects {
@@ -966,7 +1102,7 @@ div#cover-section-content {
 	}
 }
 
-/*_*_*_*_*_*_*_*_*_*_Projects BREAKPOINT min-width: 575px_*_*_*_*_*_*_*_*_*_*_*_*_*/
+/*_*_*_*_*_*_*_*_*_*_Projects BREAKPOINT min-width: 300px_*_*_*_*_*_*_*_*_*_*_*_*_*/
 @media screen and (min-width: 300px) {
 	#projects {
 		scroll-margin-top: var(--header-max-w-575);
@@ -1006,10 +1142,26 @@ div#cover-section-content {
 		scroll-margin-top: var(--header-min-w-576);
 	}
 
+	#projects-content-container {
+		padding: 3rem;
+	}
+
 	.project-link:link,
 	.project-link:visited {
 		font-size: 0.8rem;
 		letter-spacing: 0.1rem;
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+
+	.project-container {
+		padding: 5vw;
+		padding-bottom: 10vw;
+	}
+
+	.project-container-text > .para-text {
+		letter-spacing: 0px;
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -1019,6 +1171,14 @@ div#cover-section-content {
 	#projects {
 		scroll-margin-top: var(--header-min-w-768);
 	}
+
+	#projects-content-container {
+		padding: 2rem;
+	}
+	.project-container {
+		flex-basis: 20rem;
+		padding-bottom: 5vw;
+	}
 }
 
 /*_*_*_*_*_*_*_*_*_*_Projects BREAKPOINT  min-width: 992px_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -1026,6 +1186,14 @@ div#cover-section-content {
 @media screen and (min-width: 992px) {
 	#projects {
 		scroll-margin-top: var(--header-min-w-992);
+	}
+	.project-container {
+		flex-basis: 25rem;
+	}
+
+	.project-link:link,
+	.project-link:visited {
+		font-size: 1rem;
 	}
 }
 
@@ -1035,6 +1203,19 @@ div#cover-section-content {
 	#projects {
 		scroll-margin-top: var(--header-min-w-1200);
 	}
+	.project-container {
+		flex-basis: 30rem;
+		padding: 6rem;
+		padding-bottom: 3rem;
+	}
+
+	.project-container-text {
+		top: 30%;
+	}
+
+	.project-container-text > .icon-caption {
+		font-size: 1.2rem;
+	}
 }
 
 /*_*_*_*_*_*_*_*_*_*_Projects BREAKPOINT min-width: 1400px_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -1042,6 +1223,9 @@ div#cover-section-content {
 @media screen and (min-width: 1400px) {
 	#projects {
 		scroll-margin-top: var(--header-min-w-1400);
+	}
+	.project-container {
+		flex-basis: 35rem;
 	}
 }
 
@@ -1059,7 +1243,7 @@ div#contact {
 	scroll-margin-top: var(--header-min-w-576);
 }
 
-div#contact-section-content {
+#contact-section-content {
 	background-color: var(--yellow-3);
 	padding: calc(3rem + 2vw);
 	height: calc(15rem + 20vmax);
@@ -1078,7 +1262,6 @@ div#contact-section-content {
 .contact-content-link:link,
 .contact-content-link:visited {
 	font-family: 'Lato', Arial, Helvetica, sans-serif;
-	padding: 0.8rem 0.2rem;
 	margin-bottom: 0.5rem;
 	transition: all 0.5s ease-in-out;
 	width: fit-content;
@@ -1088,6 +1271,12 @@ div#contact-section-content {
 	letter-spacing: 0.2rem;
 	position: relative;
 	z-index: 1;
+}
+
+.contact-content-link:link:hover,
+.contact-content-link:visited:hover {
+	padding-right: 0.3rem;
+	padding-left: 0.3rem;
 }
 
 .contact-content-link:link::after,
@@ -1102,6 +1291,7 @@ div#contact-section-content {
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: transform 0.5s;
+	transition-delay: 0.4s;
 	z-index: -1;
 }
 
@@ -1113,13 +1303,26 @@ div#contact-section-content {
 
 /*_*_*_*_*_*_*_*_*_*_Contact BREAKPOINT max-width: 575px_*_*_*_*_*_*_*_*_*_*_*_*_*/
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 575px) {
 	#contact {
 		scroll-margin-top: var(--header-max-w-575);
 	}
 
-	.contact-content-header {
-		font-size: calc(1.5rem + 1vw);
+	#contact-section-content {
+		padding: calc(1rem + 2vw);
+		width: 15rem;
+	}
+
+	#contact-section-content > .section-header {
+		margin-bottom: 0.8rem;
+		padding: 0px;
+	}
+
+	.contact-content-link:link,
+	.contact-content-link:visited {
+		margin-bottom: 0.2rem;
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
 	}
 }
 
@@ -1136,10 +1339,23 @@ div#contact-section-content {
 		letter-spacing: 0.1rem;
 	}
 
-	div#contact-section-content {
+	#contact-section-content {
 		padding: calc(2rem + 1vw);
-		height: calc(15rem + 15vmax);
+		height: calc(15rem + 20vmax);
 		width: 20rem;
+	}
+
+	#contact-section-content > .section-header {
+		margin-bottom: 0.8rem;
+		padding: 0px;
+	}
+
+	.contact-content-link:link,
+	.contact-content-link:visited {
+		padding-bottom: 0.4rem;
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+		letter-spacing: 0.2rem;
 	}
 }
 
@@ -1149,6 +1365,11 @@ div#contact-section-content {
 	#contact {
 		scroll-margin-top: var(--header-min-w-768);
 	}
+	.contact-content-link:link,
+	.contact-content-link:visited {
+		font-size: 1.2rem;
+		letter-spacing: 0.2rem;
+	}
 }
 
 /*_*_*_*_*_*_*_*_*_*_Contact BREAKPOINT  min-width: 992px_*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -1156,6 +1377,9 @@ div#contact-section-content {
 @media screen and (min-width: 992px) {
 	#contact {
 		scroll-margin-top: var(--header-min-w-992);
+	}
+	#contact-section-content {
+		width: 25rem;
 	}
 }
 
