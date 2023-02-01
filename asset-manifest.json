@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.01d9ff94.css",
-    "main.js": "/portfolio-website/static/js/main.9ab2ace9.js",
+    "main.js": "/portfolio-website/static/js/main.9a3ec773.js",
     "static/js/787.37faa4c4.chunk.js": "/portfolio-website/static/js/787.37faa4c4.chunk.js",
     "static/media/jen-wide.jpg": "/portfolio-website/static/media/jen-wide.1a63af88816ad54af733.jpg",
     "static/media/jen-portrait.jpg": "/portfolio-website/static/media/jen-portrait.0c804aa0fc44d9dbba29.jpg",
@@ -27,11 +27,11 @@
     "static/media/JavaScript.svg": "/portfolio-website/static/media/JavaScript.ffcf56dc5498f7bbbec802191c740e5f.svg",
     "static/media/webpack.svg": "/portfolio-website/static/media/webpack.07b84130e6f8fab8d19da549a023df7c.svg",
     "main.01d9ff94.css.map": "/portfolio-website/static/css/main.01d9ff94.css.map",
-    "main.9ab2ace9.js.map": "/portfolio-website/static/js/main.9ab2ace9.js.map",
+    "main.9a3ec773.js.map": "/portfolio-website/static/js/main.9a3ec773.js.map",
     "787.37faa4c4.chunk.js.map": "/portfolio-website/static/js/787.37faa4c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01d9ff94.css",
-    "static/js/main.9ab2ace9.js"
+    "static/js/main.9a3ec773.js"
   ]
 }
