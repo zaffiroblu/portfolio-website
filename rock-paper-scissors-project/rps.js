@@ -52,7 +52,7 @@ rockBtn.addEventListener('click', () => {
 	winnerText.classList.remove('fade-in-text');
 	humIndex = gameArray.indexOf('rock');
 	animateMoves(humMoveImg, 'animate-from-left');
-	humMoveImg.src = 'images/rock-fist-hum.png';
+	humMoveImg.src = '../images/rock-fist-hum.png';
 	playRound();
 });
 
@@ -62,7 +62,7 @@ paperBtn.addEventListener('click', () => {
 	winnerText.classList.remove('fade-in-text');
 	humIndex = gameArray.indexOf('paper');
 	animateMoves(humMoveImg, 'animate-from-left');
-	humMoveImg.src = 'images/paper-hand-hum.png';
+	humMoveImg.src = '../images/paper-hand-hum.png';
 	playRound();
 });
 
@@ -72,7 +72,7 @@ scissorsBtn.addEventListener('click', () => {
 	winnerText.classList.remove('fade-in-text');
 	humIndex = gameArray.indexOf('scissors');
 	animateMoves(humMoveImg, 'animate-from-left');
-	humMoveImg.src = 'images/scissors-hand-hum.png';
+	humMoveImg.src = '../images/scissors-hand-hum.png';
 	playRound();
 });
 
@@ -89,15 +89,15 @@ function playRound() {
 	// displays the appropriate hand symbol in the DOM.
 	switch (comIndex) {
 		case 0:
-			comMoveImg.src = 'images/rock-fist-com.png';
+			comMoveImg.src = '../images/rock-fist-com.png';
 			animateMoves(comMoveImg, 'animate-from-right');
 			break;
 		case 1:
-			comMoveImg.src = 'images/paper-hand-com.png';
+			comMoveImg.src = '../images/paper-hand-com.png';
 			animateMoves(comMoveImg, 'animate-from-right');
 			break;
 		case 2:
-			comMoveImg.src = 'images/scissors-hand-com.png';
+			comMoveImg.src = '../images/scissors-hand-com.png';
 			animateMoves(comMoveImg, 'animate-from-right');
 			break;
 	}
@@ -189,16 +189,16 @@ function endAnimation() {
 		humEndImg.classList.remove('hidden');
 		comEndImg.classList.remove('hidden');
 		if (humPoints == 3) {
-			humEndImg.src = 'images/hum-win-hand.png';
+			humEndImg.src = '../images/hum-win-hand.png';
 			humEndImg.classList.add('fade-in-winner');
-			comEndImg.src = 'images/thumb-down-com-small-4.png';
+			comEndImg.src = '../images/thumb-down-com-small-4.png';
 			comEndImg.classList.add('fade-in-loser');
 			headerTextIntro.style.display = 'none';
 			gameEndBtn.classList.remove('d-none');
 		} else if (comPoints == 3) {
-			comEndImg.src = 'images/com-win-hand.png';
+			comEndImg.src = '../images/com-win-hand.png';
 			comEndImg.classList.add('fade-in-winner');
-			humEndImg.src = 'images/thumb-down-hum-small-4.png';
+			humEndImg.src = '../images/thumb-down-hum-small-4.png';
 			humEndImg.classList.add('fade-in-loser');
 			headerTextIntro.style.display = 'none';
 			gameEndBtn.classList.remove('d-none');
@@ -210,7 +210,7 @@ function endAnimation() {
 // Towards the bottom, because they can be!
 
 function animateIceCream() {
-	iceCream.src = 'images/ice-cream-stick.png';
+	iceCream.src = '../images/ice-cream-stick.png';
 	iceCream.classList.add('animate-ice-cream');
 }
 
