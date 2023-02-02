@@ -1,16 +1,32 @@
-//Display value array:
+// Welcome to my calculator code!
+// Yes, there are more efficient ways of doing this, but
+// here you get a glimpse into the way my mind solves problems
+// when it's still learning and is not yet able to find
+// the most condensed answer.
+// In such situations, I tend to split problems up and solve them
+// individually with smaller functions, then write other functions that
+// bundle the smaller ones together.
+// Here we go!
+
+//---------------------START---------------------------------
+
+// Here I create variables for 1) the value actively
+// being entered by the user, 2) the value previously entered, and
+// 3) the operator (+, -, etc.) entered.
 let activeValue = '';
 
-// let concatenatedValue = activeValue.join('');
 let storedValue = '';
 
-// This is just for testing the operator buttons, can be deleted later:
 let storedOperator = '';
 
-// This intially sets my display area to "0".
+// This grabs the display area of the DOM:
 const displayElement = document.getElementById('display');
 
-///--- Here are my click events for the operators, "=", "clear" and "backspace" and "."
+///--- Here are my click events for the operators. They 1) fire the
+// heavy-lifter function "checkAndEvaluate" found lower in the code,
+// 2) send an operator to the storedOperator variable, and 3) erase
+// the activeValue variable above, in case the user has entered something
+// previously.
 const dividedByButton = document.getElementById('divided-by');
 dividedByButton.addEventListener('click', () => {
 	checkAndEvaluate();
@@ -31,21 +47,14 @@ minusButton.addEventListener('click', () => {
 	activeValue = '';
 });
 
-// addition operator
 const plusButton = document.getElementById('plus');
 plusButton.addEventListener('click', () => {
-	if (inErrorState) {
-		return;
-	}
-	enablePointButton();
-	try {
-		performPendingCalculation();
-		startNewCalculation('+');
-	} catch {
-		enterErrorState();
-	}
+	checkAndEvaluate();
+	storedOperator = '+';
+	activeValue = '';
 });
 
+// Equals is a bit different -- it erases the storedOperator:
 const equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click', () => {
 	checkAndEvaluate();
@@ -53,6 +62,7 @@ equalsButton.addEventListener('click', () => {
 	activeValue = '';
 });
 
+// Clear is also a bit different, as it essentially erases everything:
 const clearDisplay = document.getElementById('clear');
 clearDisplay.addEventListener('click', () => {
 	activeValue = '';
@@ -62,6 +72,9 @@ clearDisplay.addEventListener('click', () => {
 	pointButton.disabled = false;
 });
 
+// Backspace lets the user erase only the final digit
+// in the concatenated string of digits currently in the
+// display area.
 const backSpace = document.getElementById('backspace');
 backSpace.addEventListener('click', () => {
 	if (activeValue.length >= 2) {
@@ -74,8 +87,10 @@ backSpace.addEventListener('click', () => {
 	}
 });
 
+// This allows the point(.) button to only be shown once
+// within the active display area, to prevent errors in the
+// calculations:
 const pointButton = document.getElementById('point');
-
 pointButton.addEventListener('click', () => {
 	pushToActiveValue('.');
 	pointButton.disabled = true;
@@ -90,8 +105,7 @@ const multiply = (num1, num2) => num1 * num2;
 
 const divide = (num1, num2) => num1 / num2;
 
-// The function that performs the correct operation on
-// 1) activeValue, 2) storedValue, 3) operator.
+// This function 1) takes the operator and 2) uses it to perform the operation on the activeValue and storedValue variables.
 const operate = (operator) => (num1, num2) => {
 	if (operator == '+') {
 		return add(num1, num2);
@@ -105,7 +119,7 @@ const operate = (operator) => (num1, num2) => {
 };
 
 // This function checks to make sure the string of digits in the display
-// aread is not too long.
+// area is not longer than 15 digits.
 function checkActiveLength(value) {
 	if (value.length > 15) {
 		displayElement.textContent = 'Too large. Please press "Clear."';
@@ -114,8 +128,11 @@ function checkActiveLength(value) {
 	return true;
 }
 
-//This is a function to push the value of the clicked calculator button to the
-//activeValue array, then concatenate multiple button presses.
+// This is a function to "push"
+// the value of the clicked integer buttons (0, 1, 2 etc.) to the activeValue array
+// at the top of this file, then concatenate multiple button presses.
+// Note that clicking each integer button in the DOM/HTML fires off this
+// function with the appropriate buttonValue as an argument.
 let pushToActiveValue = (buttonValue) => {
 	activeValue += buttonValue.toString();
 	displayElement.textContent = activeValue;
@@ -125,7 +142,11 @@ let pushToActiveValue = (buttonValue) => {
 // This is my rounding function, so all results are rounded at the 3rd decimal place:
 const roundAccurately = (number) => Number(Math.round(number + 'e3') + 'e-3');
 
-// The function that gets called to check values and evaluate them.
+// This function is a heavy lifter: It 1) checks to make sure the
+// active length is not too long, 2) fires off the "operate" function
+// if there are values both in activeValue and storedValue,
+// and converts those values from a string to a decimal number,
+// 3) fires the rounding function and 4) displays the rounded result.
 function checkAndEvaluate() {
 	if (!checkActiveLength(activeValue)) {
 		return;
@@ -145,77 +166,27 @@ function checkAndEvaluate() {
 	}
 }
 
+//------------- The End! Hope you enjoyed that little trip into my learning head.-----
+
+// After talking to my mentor, we agreed on a more condensed solution, which would look
+// something like this:
 function performPendingCalculation() {
-	// performs the stored operation on the stored value and the active value,
+	// - performs the stored operation on the stored value and the active value,
 	// if all three are defined
-	// e.g. when pressing "1 + 1 +", this will compute and show "2" after the second "+"
-	// also rounds the result
-	// throws an error if the result cannot be computed (e.g. "1 / 0")
-	// operate(...)
-	// sets the textContent of the displayElement
-	// throws an error if the text doesn't fit
-	// displayValue(result)
+	// (e.g. when pressing "1 + 1 +", this will compute and show "2" after the second "+")
+	// - also rounds the result
+	// - throws an error if the result cannot be computed (e.g. "1 / 0")
+	// - performs operate(...)
+	// - sets the textContent of the displayElement
+	// - throws an error if the text doesn't fit
+	// - triggers the function displayValue(result)
 }
 
-function startNewCalculation(operation) {}
-
+// There would also be a function for displaying the result...
 function displayValue(value) {}
 
-// console.log(activeValue);
-// console.log(typeof activeValue);
-// console.log(storedValue);
-// console.log(typeof storedValue);
-// console.log(storedOperator);
-// console.log(typeof storedOperator);
-// console.log('END OF BUTTON STATUS');
+// ... and for starting a new calculation.
+function startNewCalculation(operation) {}
 
-// console.log(activeValue);
-// console.log(typeof activeValue);
-// console.log(storedValue);
-// console.log(typeof storedValue);
-// console.log(storedOperator);
-// console.log(typeof storedOperator);
-//
-
-// function checkIfZeroDivZero(result) {
-// 	if (storedOperator == '/' && storedValue == '0' && result == '0') {
-// 		displayElement.textContent = 'Cannot calculate. Please press "Clear."';
-// 		return true;
-// 	}
-// 	return false;
-// }
-
-// if (checkIfZeroDivZero(roundedResult)) {
-//     return;
-// }
-
-// Click events for all the buttons + function pushToDisplay to push each button value to the array activeValue.
-// const zeroButton = document.getElementById('zero');
-// zeroButton.addEventListener('click', () => pushToActiveValue(0));
-
-// const oneButton = document.getElementById('one');
-// oneButton.addEventListener('click', () => pushToActiveValue(1));
-
-// const twoButton = document.getElementById('two');
-// twoButton.addEventListener('click', () => pushToActiveValue(2));
-
-// const threeButton = document.getElementById('three');
-// threeButton.addEventListener('click', () => pushToActiveValue(3));
-
-// const fourButton = document.getElementById('four');
-// fourButton.addEventListener('click', () => pushToActiveValue(4));
-
-// const fiveButton = document.getElementById('five');
-// fiveButton.addEventListener('click', () => pushToActiveValue(5));
-
-// const sixButton = document.getElementById('six');
-// sixButton.addEventListener('click', () => pushToActiveValue(6));
-
-// const sevenButton = document.getElementById('seven');
-// sevenButton.addEventListener('click', () => pushToActiveValue(7));
-
-// const eightButton = document.getElementById('eight');
-// eightButton.addEventListener('click', () => pushToActiveValue(8));
-
-// const nineButton = document.getElementById('nine');
-// nineButton.addEventListener('click', () => pushToActiveValue(9));
+// I decided not to implement these suggestions and simply move on to other projects.
+// When I have some extra time one fine day, I will revisit this lovely little practice project and refactor!
