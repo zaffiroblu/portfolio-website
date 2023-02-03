@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.6d725c33.css",
-    "main.js": "/portfolio-website/static/js/main.ae644e2d.js",
+    "main.css": "/portfolio-website/static/css/main.92e029db.css",
+    "main.js": "/portfolio-website/static/js/main.d5f9dc1f.js",
     "static/js/787.37faa4c4.chunk.js": "/portfolio-website/static/js/787.37faa4c4.chunk.js",
     "static/media/Jen_BnW_cropped.jpg": "/portfolio-website/static/media/Jen_BnW_cropped.20e2f37d1e37cd1587f1.jpg",
     "static/media/Screenshot_weather-app.png": "/portfolio-website/static/media/Screenshot_weather-app.af64d111c1e48c227656.png",
     "static/media/Screenshot_Wahlverwandtschaften.png": "/portfolio-website/static/media/Screenshot_Wahlverwandtschaften.47cdb48a675cedc26895.png",
-    "static/media/clement-unsplash.jpg": "/portfolio-website/static/media/clement-unsplash.b6c3931702238e97de51.jpg",
     "static/media/jen-wide.jpg": "/portfolio-website/static/media/jen-wide.55c3eb19ef55bd94229a.jpg",
     "static/media/jen-portrait.jpg": "/portfolio-website/static/media/jen-portrait.2e56ca3934103852868f.jpg",
+    "static/media/clement-unsplash.jpg": "/portfolio-website/static/media/clement-unsplash.e6d482a6984432a28c81.jpg",
     "static/media/Screenshot_CV-Generator.png": "/portfolio-website/static/media/Screenshot_CV-Generator.f6135d5228e8ce63863b.png",
     "static/media/Screenshot_calculator.png": "/portfolio-website/static/media/Screenshot_calculator.e6a4428f5232353c151d.png",
     "static/media/Screenshot_RPS.png": "/portfolio-website/static/media/Screenshot_RPS.36c7b24d200d2abbf0ef.png",
@@ -26,12 +26,12 @@
     "index.html": "/portfolio-website/index.html",
     "static/media/JavaScript.svg": "/portfolio-website/static/media/JavaScript.ffcf56dc5498f7bbbec802191c740e5f.svg",
     "static/media/webpack.svg": "/portfolio-website/static/media/webpack.07b84130e6f8fab8d19da549a023df7c.svg",
-    "main.6d725c33.css.map": "/portfolio-website/static/css/main.6d725c33.css.map",
-    "main.ae644e2d.js.map": "/portfolio-website/static/js/main.ae644e2d.js.map",
+    "main.92e029db.css.map": "/portfolio-website/static/css/main.92e029db.css.map",
+    "main.d5f9dc1f.js.map": "/portfolio-website/static/js/main.d5f9dc1f.js.map",
     "787.37faa4c4.chunk.js.map": "/portfolio-website/static/js/787.37faa4c4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d725c33.css",
-    "static/js/main.ae644e2d.js"
+    "static/css/main.92e029db.css",
+    "static/js/main.d5f9dc1f.js"
   ]
 }
