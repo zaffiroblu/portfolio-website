@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.92e029db.css",
-    "main.js": "/portfolio-website/static/js/main.d5f9dc1f.js",
+    "main.js": "/portfolio-website/static/js/main.081353a7.js",
     "static/js/787.37faa4c4.chunk.js": "/portfolio-website/static/js/787.37faa4c4.chunk.js",
     "static/media/Jen_BnW_cropped.jpg": "/portfolio-website/static/media/Jen_BnW_cropped.20e2f37d1e37cd1587f1.jpg",
     "static/media/Screenshot_weather-app.png": "/portfolio-website/static/media/Screenshot_weather-app.af64d111c1e48c227656.png",
@@ -27,11 +27,11 @@
     "static/media/JavaScript.svg": "/portfolio-website/static/media/JavaScript.ffcf56dc5498f7bbbec802191c740e5f.svg",
     "static/media/webpack.svg": "/portfolio-website/static/media/webpack.07b84130e6f8fab8d19da549a023df7c.svg",
     "main.92e029db.css.map": "/portfolio-website/static/css/main.92e029db.css.map",
-    "main.d5f9dc1f.js.map": "/portfolio-website/static/js/main.d5f9dc1f.js.map",
+    "main.081353a7.js.map": "/portfolio-website/static/js/main.081353a7.js.map",
     "787.37faa4c4.chunk.js.map": "/portfolio-website/static/js/787.37faa4c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92e029db.css",
-    "static/js/main.d5f9dc1f.js"
+    "static/js/main.081353a7.js"
   ]
 }
