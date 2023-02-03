@@ -1,4 +1,6 @@
-// My first attempt at building a IIFE for the gameDisplay:
+// Welcome! Here's my first attempt at building a IIFE for the gameDisplay, and
+// for trying to go about things in an object-oriented manner.
+
 const gameDisplay = (() => {
 	const tField = ['', '', '', '', '', '', '', '', ''];
 	const tMessage = document.querySelector('.game-message-display');
@@ -19,18 +21,16 @@ gameDisplay.tMessage.innerText = "Hey player X! You're up first.";
 const playerFactory = (symbol) => {
 	const makeMove = (arrayIndex) => {
 		gameDisplay.tField[arrayIndex] = symbol;
-		// + add an inactive class to the position!
 	};
 	return { symbol, makeMove };
 };
 
-//I create players as an array, like Roman did:
+//I create players as an array:
 const playerArray = [playerFactory('X'), playerFactory('O')];
 
-// What I need (for instance): playerArray[1].makeMove(2)
-
+// Here we go with another IIFE!
 const roundElements = (() => {
-	//This sets the first turn value:
+	// This sets the first turn value:
 	function playerMove(gameArrayIndex) {
 		if (turn) {
 			playerArray[0].makeMove(gameArrayIndex);
@@ -38,15 +38,16 @@ const roundElements = (() => {
 			playerArray[1].makeMove(gameArrayIndex);
 		}
 	}
+
 	// This is the function to display the move on the board.
 	const displayMove = (gameArrayIndex) => {
-		//Now I the button that was clicked is disabled, so no other moves are allowed there.
-		// const field0 = document.querySelector('#index-0');
 		let fieldToDisplay = document.querySelector(`#index-${gameArrayIndex}`);
 		fieldToDisplay.innerText = gameDisplay.tField[`${gameArrayIndex}`];
+		// Now the button that was clicked is disabled, so no other moves are allowed there.
 		fieldToDisplay.classList.add('disabled');
 	};
 
+	// This function checks for a win at every turn:
 	function checkForWin(location, fieldIndex1, fieldIndex2, fieldIndex3) {
 		if (
 			location[fieldIndex1] !== '' &&
@@ -65,6 +66,7 @@ const roundElements = (() => {
 		}
 	}
 
+	// This function checks to see if the game is a draw:
 	function checkForDraw() {
 		const isNotEmpty = (currentValue) => currentValue !== '';
 		if (gameDisplay.tField.every(isNotEmpty)) {
@@ -90,7 +92,10 @@ const roundElements = (() => {
 		alternateTurns,
 	};
 })();
+// WOW! That was satisfying. :-)
 
+// Here is a normal function that is triggered each time
+// a player clicks/taps a game field in the UI:
 function ticTacToe(gameArrayIndex) {
 	// My idea for turns: I have a function that alternates turns at this point:
 	roundElements.alternateTurns();
