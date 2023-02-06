@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio-website/weather-app-project/static/css/main.919178b0.css",
+    "main.js": "/portfolio-website/weather-app-project/static/js/main.5f40ab4e.js",
+    "static/js/787.d9312eb8.chunk.js": "/portfolio-website/weather-app-project/static/js/787.d9312eb8.chunk.js",
+    "static/media/smoke-pic.jpg": "/portfolio-website/weather-app-project/static/media/smoke-pic.6681d218254199d9f473.jpg",
+    "static/media/snow-pic.jpg": "/portfolio-website/weather-app-project/static/media/snow-pic.4119f1f6fe892c70271f.jpg",
+    "static/media/drizzle-pic.jpg": "/portfolio-website/weather-app-project/static/media/drizzle-pic.216ef3ff3f0fe2cbdfdb.jpg",
+    "static/media/rain-pic.jpg": "/portfolio-website/weather-app-project/static/media/rain-pic.820489f349912dd061fc.jpg",
+    "static/media/thunderstorm-pic.jpg": "/portfolio-website/weather-app-project/static/media/thunderstorm-pic.34ac5b53ae2beedaa0da.jpg",
+    "static/media/clouds-pic.jpg": "/portfolio-website/weather-app-project/static/media/clouds-pic.c3ba364f78aa11cd7e84.jpg",
+    "static/media/hail-pic.jpg": "/portfolio-website/weather-app-project/static/media/hail-pic.e0d7b8d6aa0a08045546.jpg",
+    "static/media/dust-pic.jpg": "/portfolio-website/weather-app-project/static/media/dust-pic.5c0f050faca8bce5b4c4.jpg",
+    "static/media/clear-pic.jpg": "/portfolio-website/weather-app-project/static/media/clear-pic.c970ce02ba4e4db9e70f.jpg",
+    "static/media/fog-pic.jpg": "/portfolio-website/weather-app-project/static/media/fog-pic.edb09eb1c642ee48e499.jpg",
+    "static/media/logo_white_cropped_small.png": "/portfolio-website/weather-app-project/static/media/logo_white_cropped_small.6b608aba4ae985d5131a.png",
+    "index.html": "/portfolio-website/weather-app-project/index.html",
+    "main.919178b0.css.map": "/portfolio-website/weather-app-project/static/css/main.919178b0.css.map",
+    "main.5f40ab4e.js.map": "/portfolio-website/weather-app-project/static/js/main.5f40ab4e.js.map",
+    "787.d9312eb8.chunk.js.map": "/portfolio-website/weather-app-project/static/js/787.d9312eb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.919178b0.css",
+    "static/js/main.5f40ab4e.js"
+  ]
+}

@@ -2,6 +2,7 @@
 	"name": "portfolio-site",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://zaffiroblu.github.io/portfolio-website",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
@@ -20,7 +21,10 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"collect": "cp -R ./project-folders/calculator-project/dist/ ./public/calculator-project && cp -R ./project-folders/cv-generator/build/ ./public/cv-generator-project && cp -R ./project-folders/Rock-Paper-Scissors-Project/dist/ ./public/rock-paper-scissors-project && cp -R ./project-folders/tic-tac-toe-rebooted/dist/ ./public/tic-tac-toe-project && cp -R ./project-folders/weather-app/build/ ./public/weather-app-project && cp -R ./project-folders/wv-berlin/dist/ ./public/wv-project"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -41,6 +45,7 @@
 		]
 	},
 	"devDependencies": {
+		"gh-pages": "^5.0.0",
 		"sass": "^1.57.1"
 	}
 }

@@ -66,7 +66,7 @@ body {
 }
 
 .para-text {
-	font-size: calc(0.6rem + 0.8vw);
+	font-size: calc(0.7rem + 0.8vw);
 	font-weight: 600;
 	font-family: 'Lato', Arial, Helvetica, sans-serif;
 	text-align: justify;
@@ -380,21 +380,20 @@ div#cover-section-content {
 	background-color: var(--yellow-2);
 	padding: calc(1rem + 2vw);
 	height: calc(5rem + 20vmax);
-
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 
 	animation: coverdiv 2.5s;
 }
 
 @keyframes coverdiv {
 	0% {
-		transform: translateY(-100rem);
+		transform: translateX(-100rem);
 	}
 
 	100% {
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 }
 
@@ -485,6 +484,10 @@ div#cover-section-content {
 /*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT max-width 575px*_*_*_*_*_*_*_*_*_*_*_*_*/
 
 @media screen and (max-width: 575px) {
+	div#cover-section-content {
+		margin-bottom: 1rem;
+	}
+
 	.cover-section-content-link:link,
 	.cover-section-content-link:visited {
 		padding: 0.4rem 0rem;
@@ -493,7 +496,7 @@ div#cover-section-content {
 	}
 }
 
-/*_*_*_*_*_*_*_*_*_*_Cover-Section BREAKPOINT aspect ratio 1/1 AND max-width 575px*_*_*_*_*_*_*_*_*_*_*_*_*/
+/*_*_*_Cover-Section BREAKPOINT aspect ratio 1/1 AND max-width 575px*_*_*_*_*/
 
 @media (max-aspect-ratio: 1/1) and (max-width: 575px) {
 	div#cover-section {
@@ -501,6 +504,10 @@ div#cover-section-content {
 		background-position: center;
 		justify-content: flex-start;
 		align-items: end;
+	}
+
+	div#cover-section-content {
+		margin-bottom: 1rem;
 	}
 }
 

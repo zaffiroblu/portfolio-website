@@ -22,13 +22,23 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>CV Generator</h3>
 						<p className='para-text'>
-							Built with React Typescript.
+							Desktop app, built with React Typescript.
 						</p>
 						<div className='project-links-container'>
-							<a href='#' className='project-link'>
+							<a
+								href='cv-generator-project/index.html'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								Live Demo
 							</a>
-							<a href='#' className='project-link'>
+							<a
+								href='https://github.com/zaffiroblu/CV-Generator'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								GitHub
 							</a>
 						</div>
@@ -49,10 +59,20 @@ export const Projects = () => {
 							and React.
 						</p>
 						<div className='project-links-container'>
-							<a href='#' className='project-link'>
+							<a
+								href='weather-app-project/index.html'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								Live Demo
 							</a>
-							<a href='#' className='project-link'>
+							<a
+								href='https://github.com/zaffiroblu/react-weather-app'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								GitHub
 							</a>
 						</div>
@@ -69,38 +89,24 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>WV Website</h3>
 						<p className='para-text'>
-							For the 'Wahlverwandtschaften' group in Berlin,
-							built with JavaScript components.
+							Responsive design for the "Wahlverwandtschaften"
+							group in Berlin, built with JavaScript components.
 						</p>
 						<div className='project-links-container'>
-							<a href='#' className='project-link'>
+							<a
+								href='/portfolio-website/wv-project/index.html'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								Live Demo
 							</a>
-							<a href='#' className='project-link'>
-								GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-				<div className='project-container'>
-					<div className='project-container-image'>
-						<img
-							src={RPS}
-							alt='Rock, Paper and Scissors Project'
-							id='rps-project'
-						/>
-					</div>
-					<div className='project-container-text'>
-						<h3 className='icon-caption'>Rock, Paper, Scissors</h3>
-						<p className='para-text'>
-							Can you beat this mobile game, built in vanilla
-							JavaScript?
-						</p>
-						<div className='project-links-container'>
-							<a href='#' className='project-link'>
-								Live Demo
-							</a>
-							<a href='#' className='project-link'>
+							<a
+								href='https://github.com/zaffiroblu/wv-berlin/tree/main'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								GitHub
 							</a>
 						</div>
@@ -117,14 +123,58 @@ export const Projects = () => {
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>Tic-Tac-Toe</h3>
 						<p className='para-text'>
-							A JavaScript game to play with a friend when you
-							don't have spare paper.
+							Built in simple JavaScript with IIFEs and factory
+							functions.
 						</p>
 						<div className='project-links-container'>
-							<a href='#' className='project-link'>
+							<a
+								href='/portfolio-website/tic-tac-toe-project/index.html'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								Live Demo
 							</a>
-							<a href='#' className='project-link'>
+							<a
+								href='https://github.com/zaffiroblu/tic-tac-toe-rebooted'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
+								GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className='project-container'>
+					<div className='project-container-image'>
+						<img
+							src={RPS}
+							alt='Rock, Paper and Scissors Project'
+							id='rps-project'
+						/>
+					</div>
+					<div className='project-container-text'>
+						<h3 className='icon-caption'>Rock, Paper, Scissors</h3>
+						<p className='para-text'>
+							An animated game designed for mobile devices, built
+							in vanilla JavaScript.
+						</p>
+						<div className='project-links-container'>
+							<a
+								href='/portfolio-website/rock-paper-scissors-project/index.html'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
+								Live Demo
+							</a>
+							<a
+								href='https://github.com/zaffiroblu/Rock-Paper-Scissors-Project/tree/RPS-UI'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								GitHub
 							</a>
 						</div>
@@ -140,15 +190,22 @@ export const Projects = () => {
 					</div>
 					<div className='project-container-text'>
 						<h3 className='icon-caption'>Calculator</h3>
-						<p className='para-text'>
-							A pretty nifty calculator, built in simple
-							JavaScript.
-						</p>
+						<p className='para-text'>Built in simple JavaScript.</p>
 						<div className='project-links-container'>
-							<a href='#' className='project-link'>
+							<a
+								href='/portfolio-website/calculator-project/index.html'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								Live Demo
 							</a>
-							<a href='#' className='project-link'>
+							<a
+								href='https://github.com/zaffiroblu/calculator-project'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='project-link'
+							>
 								GitHub
 							</a>
 						</div>

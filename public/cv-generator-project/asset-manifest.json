@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio-website/cv-generator-project/static/css/main.9753e616.css",
+    "main.js": "/portfolio-website/cv-generator-project/static/js/main.a6474f38.js",
+    "static/js/787.e7cea540.chunk.js": "/portfolio-website/cv-generator-project/static/js/787.e7cea540.chunk.js",
+    "index.html": "/portfolio-website/cv-generator-project/index.html",
+    "main.9753e616.css.map": "/portfolio-website/cv-generator-project/static/css/main.9753e616.css.map",
+    "main.a6474f38.js.map": "/portfolio-website/cv-generator-project/static/js/main.a6474f38.js.map",
+    "787.e7cea540.chunk.js.map": "/portfolio-website/cv-generator-project/static/js/787.e7cea540.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9753e616.css",
+    "static/js/main.a6474f38.js"
+  ]
+}
